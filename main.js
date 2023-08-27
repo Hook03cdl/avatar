@@ -4,31 +4,6 @@ const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight - 50;
 canvas.width = window.innerWidth - 200;
 
-const rect = canvas.getBoundingClientRect();
-
-let cursorX = document.getElementById('cursor-x');
-let cursorY = document.getElementById('cursor-y');
-let punto = document.getElementById('punto');
-var cx = 0;
-var cy = 0;
-
-canvas.addEventListener('mousemove', (event) => {
-	cy = event.clientY - rect.top;
-	cx = event.clientX - rect.left;
-	cursorX.innerHTML = `x: ${cx}`;
-	cursorY.innerHTML = `y: ${cy}`;
-	// ctx.fillStyle = 'red';
-	// ctx.fillRect(cx, cy, 10, 10);
-});
-
-canvas.addEventListener('mousedown', (e) => {
-	punto.innerHTML = `p: 
-            x:${cx - 2} y:${cy - 2}`;
-	ctx.fillStyle = 'red';
-	ctx.fillRect(cx - 2, cy - 2, 2, 2);
-});
-
-// cabeza
 const dibujo = [
 	[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
 	[0, 0, 0, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 0, 0, 0, 1, 10, 1, 0],

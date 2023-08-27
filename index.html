@@ -16,32 +16,13 @@
 			width: 100%;
 			display: grid;
 			place-items: center;
-			cursor: crosshair;
 		}
 		#miCanvas {
 			background: #333;
-			z-index: 3;
-		}
-		img {
-			position: absolute;
-			top: 50px;
-			z-index: 2;
-		}
-		.cursor {
-			position: fixed;
-			top: 0;
-			right: 0;
-			padding: 30px;
 		}
 	</style>
 	<body>
-		<div class="cursor">
-			<h3 id="cursor-x"></h3>
-			<h3 id="cursor-y"></h3>
-			<h4 id="punto"></h4>
-		</div>
-		<!-- <img src="/Finn.jpg" height="400" width="300" /> -->
-		<canvas id="miCanvas" style="border: 3px solid #333"></canvas>
+		<canvas id="miCanvas"></canvas>
 
 		<script src="/main.js"></script>
 	</body>
